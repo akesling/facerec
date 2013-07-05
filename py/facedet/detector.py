@@ -115,8 +115,8 @@ if __name__ == "__main__":
 	imgOut = img.copy()
 	# set up detectors
 	#detector = SkinFaceDetector(threshold=0.3, cascade_fn="/home/philipp/projects/opencv2/OpenCV-2.3.1/data/haarcascades/haarcascade_frontalface_alt2.xml")
-	detector = CascadedDetector(cascade_fn="/home/philipp/projects/opencv2/OpenCV-2.3.1/data/haarcascades/haarcascade_frontalface_alt2.xml")
-	eyesDetector = CascadedDetector(scaleFactor=1.1,minNeighbors=5, minSize=(20,20), cascade_fn="/home/philipp/projects/opencv2/OpenCV-2.3.1/data/haarcascades/haarcascade_eye.xml")
+	detector = CascadedDetector(cascade_fn="/usr/share/OpenCV/haarcascades/haarcascade_frontalface_alt2.xml")
+	eyesDetector = CascadedDetector(scaleFactor=1.1,minNeighbors=5, minSize=(20,20), cascade_fn="/usr/share/OpenCV/haarcascades/haarcascade_eye.xml")
 	# detection
 	for i,r in enumerate(detector.detect(img)):
 		x0,y0,x1,y1 = r
